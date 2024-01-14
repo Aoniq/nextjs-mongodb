@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <div className="position-absolute top-0 bottom-0 left-0 w-full h-full bg-black text-white">
+    <footer className="w-full h-full bg-black text-white">
       <div className="h-full w-full container mx-auto px-4 md:px-0">
         <div className='flex lg:flex-row mt-2 lg:mt-0 lg:ml-6 text-lg font-light'>
           <Link href="/" className="hover:text-jungle-green-500 duration-200 py-4">
@@ -13,6 +13,6 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
