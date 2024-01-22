@@ -2,13 +2,13 @@
 import { useState, useEffect } from 'react';
 
 async function getPosts() {
-  const res = await fetch('http://localhost:3000/api/posts', { cache: 'no-store' });
+  const res = await fetch('https://nextjs-mongodb-roan-nine.vercel.app/api/posts', { cache: 'no-store' });
   const json = await res.json();
   return json.posts;
 }
 
 const deletePost = async (id) => {
-  await fetch('http://localhost:3000/api/posts/delete', {
+  await fetch('https://nextjs-mongodb-roan-nine.vercel.app/api/posts/delete', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -18,7 +18,7 @@ const deletePost = async (id) => {
 };
 
 const updatePost = async (id, updatedData) => {
-  await fetch('http://localhost:3000/api/posts/update', {
+  await fetch('https://nextjs-mongodb-roan-nine.vercel.app/api/posts/update', {
     method: 'POST', // Use the appropriate HTTP method (PUT/PATCH) for updating
     headers: {
       'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ export default function Home() {
 
   const handleCreateDocument = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/posts/create', {
+      const response = await fetch('https://nextjs-mongodb-roan-nine.vercel.app/api/posts/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
