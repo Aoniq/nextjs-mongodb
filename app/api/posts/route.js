@@ -1,7 +1,7 @@
 import connect from "@/db";
 import { NextResponse } from "next/server";
 import Post from "@/models/Post";
-
+export const dynamic = 'force-dynamic' // defaults to auto
 export async function GET(request) {
     try {
     await connect();
